@@ -86,7 +86,7 @@
                     <navigationItem key="navigationItem" title="Weather Forecast" id="Sdc-3U-ZHO">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="vqd-b5-mWj">
                             <connections>
-                                <segue destination="Efb-G7-57n" kind="presentation" id="9ZH-AE-qb3"/>
+                                <segue destination="Efb-G7-57n" kind="presentation" identifier="AddCities" id="9ZH-AE-qb3"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -119,7 +119,7 @@
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <state key="normal" title="Get Weather Info"/>
                                 <connections>
-                                    <action selector="saveBtnTapped:" destination="sve-yb-m96" eventType="touchUpInside" id="qCj-D4-jZl"/>
+                                    <action selector="getWeatherInfoBtnTapped:" destination="sve-yb-m96" eventType="touchUpInside" id="yNW-b8-9fU"/>
                                 </connections>
                             </button>
                         </subviews>
