@@ -13,3 +13,9 @@ extension Double {
         return String(format: "%.0f°", self)
     }
 }
+
+extension String {
+    var containsWhitespace : Bool {
+        return(self.rangeOfCharacter(from: .whitespacesAndNewlines) != nil)
+    }
+}

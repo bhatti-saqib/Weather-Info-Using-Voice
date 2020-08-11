@@ -61,7 +61,13 @@ class AddWeatherCityViewController: UIViewController {
     }
     
     @IBAction func getWeatherInfoBtnTapped(_ sender: UIButton) {
-        if let city = cityNamesTextField.text {
+        
+        if var city = cityNamesTextField.text {
+            if(city.containsWhitespace) {
+                let urlNew = city.replacingOccurrences(of: " ", with: "%20")
+                city = urlNew
+            }
+            
             let weatherURL = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(city)&units=imperial&appid=f1b281b9d22dbbbbfeab25b4e34bc6f0")!
             
             let weatherResource = Resource<WeatherViewModel>(url: weatherURL) { data in
@@ -178,3 +184,4 @@ extension AddWeatherCityViewController: SFSpeechRecognizerDelegate {
         }
     }
 }
+
